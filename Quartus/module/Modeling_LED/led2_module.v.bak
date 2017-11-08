@@ -1,0 +1,9 @@
+module led2_module
+(
+	CLK, RST_N, LED_OUT
+);
+input CLK;
+input RST_N;
+output LED_OUT;
+
+endmodule

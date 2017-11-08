@@ -1,0 +1,6 @@
+|verilog_ex2
+clk => cnt.CLK
+rst_n => cnt.ACLR
+clk_div << cnt.DB_MAX_OUTPUT_PORT_TYPE
+
+

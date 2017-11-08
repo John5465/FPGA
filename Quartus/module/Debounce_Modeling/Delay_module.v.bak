@@ -1,0 +1,20 @@
+/**********************************************
+Modele Name：Delay_module()
+Module Function：yan shi jian ce
+Input Parameters：H2L_Sig,L2H_Sig
+Output Parameters：Pin_Out
+Data：2016/9/12
+Author: VanAllen Ye
+**********************************************/
+
+module Delay_module(
+	CLK,RST_N,
+	H2L_Sig,L2H_Sig,
+	Pin_Out
+);
+
+input
+
+
+
+endmodule

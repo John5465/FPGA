@@ -1,0 +1,1528 @@
+TimeQuest Timing Analyzer report for TX_module_Demo
+Wed Sep 14 11:05:06 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLK'
+ 13. Slow 1200mV 85C Model Hold: 'CLK'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Summary
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'CLK'
+ 25. Slow 1200mV 0C Model Hold: 'CLK'
+ 26. Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Summary
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Setup: 'CLK'
+ 36. Fast 1200mV 0C Model Hold: 'CLK'
+ 37. Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Summary
+ 41. Multicorner Timing Analysis Summary
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Board Trace Model Assignments
+ 45. Input Transition Times
+ 46. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 47. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 48. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 49. Setup Transfers
+ 50. Hold Transfers
+ 51. Report TCCS
+ 52. Report RSKM
+ 53. Unconstrained Paths
+ 54. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name      ; TX_module_Demo                                      ;
+; Device Family      ; Cyclone IV E                                        ;
+; Device Name        ; EP4CE6F17C8                                         ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 230.73 MHz ; 230.73 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; CLK   ; -3.334 ; -105.455           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; CLK   ; 0.452 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; CLK   ; -3.000 ; -71.402                          ;
++-------+--------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                                                                                       ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.334 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 4.249      ;
+; -3.171 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 4.086      ;
+; -3.074 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.989      ;
+; -3.004 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.924      ;
+; -3.004 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.924      ;
+; -2.980 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.895      ;
+; -2.970 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.885      ;
+; -2.955 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.870      ;
+; -2.941 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.861      ;
+; -2.941 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.861      ;
+; -2.941 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.861      ;
+; -2.931 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.846      ;
+; -2.878 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.798      ;
+; -2.863 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.286      ;
+; -2.863 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.286      ;
+; -2.858 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.778      ;
+; -2.858 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.778      ;
+; -2.834 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 4.231      ;
+; -2.817 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.732      ;
+; -2.816 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.736      ;
+; -2.816 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.736      ;
+; -2.816 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.239      ;
+; -2.816 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.239      ;
+; -2.811 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.726      ;
+; -2.807 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.722      ;
+; -2.800 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.223      ;
+; -2.796 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.219      ;
+; -2.796 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.219      ;
+; -2.795 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.715      ;
+; -2.787 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.707      ;
+; -2.781 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.204      ;
+; -2.780 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.695      ;
+; -2.764 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.679      ;
+; -2.761 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.184      ;
+; -2.760 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.679      ;
+; -2.753 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.673      ;
+; -2.747 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.170      ;
+; -2.747 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.170      ;
+; -2.743 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.658      ;
+; -2.731 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 4.128      ;
+; -2.720 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.635      ;
+; -2.714 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.629      ;
+; -2.712 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.578     ; 3.135      ;
+; -2.712 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.632      ;
+; -2.710 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.625      ;
+; -2.705 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 4.102      ;
+; -2.700 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.620      ;
+; -2.700 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.620      ;
+; -2.697 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.616      ;
+; -2.693 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[15]             ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.612      ;
+; -2.690 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 4.087      ;
+; -2.667 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.579     ; 3.089      ;
+; -2.665 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.579     ; 3.087      ;
+; -2.664 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.584      ;
+; -2.664 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.584      ;
+; -2.647 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.567      ;
+; -2.645 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.579     ; 3.067      ;
+; -2.639 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.559      ;
+; -2.637 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.557      ;
+; -2.631 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.551      ;
+; -2.631 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.551      ;
+; -2.628 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.543      ;
+; -2.626 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.546      ;
+; -2.614 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.533      ;
+; -2.608 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[15]             ; CLK          ; CLK         ; 1.000        ; -0.082     ; 3.527      ;
+; -2.606 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.526      ;
+; -2.603 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.523      ;
+; -2.603 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.523      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.601 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.516      ;
+; -2.601 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.521      ;
+; -2.596 ; control_module:U1|isEn                      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.102     ; 3.495      ;
+; -2.596 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 3.993      ;
+; -2.596 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.579     ; 3.018      ;
+; -2.594 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.514      ;
+; -2.594 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.514      ;
+; -2.592 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.507      ;
+; -2.591 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.086     ; 3.506      ;
+; -2.587 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.396      ; 3.984      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
+; -2.579 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.499      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                                                                                       ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; control_module:U1|isEn                      ; control_module:U1|isEn                      ; CLK          ; CLK         ; 0.000        ; 0.082      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|rTX       ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|isDone    ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.746      ;
+; 0.515 ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 0.808      ;
+; 0.745 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.038      ;
+; 0.761 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.762 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.762 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.055      ;
+; 0.763 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[16]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[0]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.765 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.766 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.059      ;
+; 0.769 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.062      ;
+; 0.770 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.063      ;
+; 0.773 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.066      ;
+; 0.774 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.067      ;
+; 0.785 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.078      ;
+; 0.787 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.080      ;
+; 0.789 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.082      ;
+; 0.809 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.102      ;
+; 0.966 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.259      ;
+; 1.018 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.578      ; 1.808      ;
+; 1.080 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.373      ;
+; 1.099 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.392      ;
+; 1.107 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.400      ;
+; 1.116 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.117 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.118 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; control_module:U1|Count_Sec[17]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.118 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.411      ;
+; 1.123 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.416      ;
+; 1.124 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.125 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.125 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.126 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.126 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.127 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.420      ;
+; 1.133 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.134 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.134 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.135 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.136 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.429      ;
+; 1.141 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.101      ; 1.454      ;
+; 1.143 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.436      ;
+; 1.144 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.437      ;
+; 1.162 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.455      ;
+; 1.174 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.578      ; 1.964      ;
+; 1.179 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[19]             ; CLK          ; CLK         ; 0.000        ; 0.578      ; 1.969      ;
+; 1.180 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.473      ;
+; 1.183 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.476      ;
+; 1.186 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 0.000        ; 0.578      ; 1.976      ;
+; 1.188 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[20]             ; CLK          ; CLK         ; 0.000        ; 0.578      ; 1.978      ;
+; 1.196 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.489      ;
+; 1.198 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.491      ;
+; 1.198 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.491      ;
+; 1.204 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.497      ;
+; 1.222 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.515      ;
+; 1.230 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.523      ;
+; 1.239 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.532      ;
+; 1.247 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.247 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.540      ;
+; 1.248 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.541      ;
+; 1.249 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.542      ;
+; 1.249 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.542      ;
+; 1.249 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.542      ;
+; 1.256 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.549      ;
+; 1.256 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.549      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                      ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                                         ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; 0.262  ; 0.482        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; 0.263  ; 0.483        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; 0.284  ; 0.504        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; 0.287  ; 0.507        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; 0.303  ; 0.491        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 8.045 ; 8.170 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 7.760 ; 7.881 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 247.95 MHz ; 247.95 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -3.033 ; -93.970           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.401 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -71.402                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.033 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.956      ;
+; -2.965 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.888      ;
+; -2.871 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.794      ;
+; -2.809 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.739      ;
+; -2.809 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.739      ;
+; -2.746 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.676      ;
+; -2.746 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.676      ;
+; -2.738 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.668      ;
+; -2.709 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.632      ;
+; -2.700 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.623      ;
+; -2.688 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.611      ;
+; -2.675 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.605      ;
+; -2.670 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.593      ;
+; -2.655 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.539     ; 3.118      ;
+; -2.655 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.539     ; 3.118      ;
+; -2.641 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.564      ;
+; -2.635 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.558      ;
+; -2.632 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.555      ;
+; -2.602 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.532      ;
+; -2.602 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.532      ;
+; -2.587 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.510      ;
+; -2.584 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.539     ; 3.047      ;
+; -2.567 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.497      ;
+; -2.567 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.497      ;
+; -2.556 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.073     ; 3.485      ;
+; -2.547 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.470      ;
+; -2.541 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.538     ; 3.005      ;
+; -2.541 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 3.005      ;
+; -2.538 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.538     ; 3.002      ;
+; -2.538 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 3.002      ;
+; -2.538 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.461      ;
+; -2.531 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.461      ;
+; -2.515 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.438      ;
+; -2.498 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.421      ;
+; -2.497 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.961      ;
+; -2.497 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.961      ;
+; -2.496 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.426      ;
+; -2.493 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.073     ; 3.422      ;
+; -2.488 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.411      ;
+; -2.475 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.405      ;
+; -2.475 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.405      ;
+; -2.470 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.934      ;
+; -2.467 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.931      ;
+; -2.448 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.378      ;
+; -2.439 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.375      ; 3.816      ;
+; -2.427 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.357      ;
+; -2.427 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.357      ;
+; -2.426 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.890      ;
+; -2.417 ; control_module:U1|isEn                      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.087     ; 3.332      ;
+; -2.411 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.334      ;
+; -2.410 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.340      ;
+; -2.410 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.340      ;
+; -2.406 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.336      ;
+; -2.406 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.336      ;
+; -2.404 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.334      ;
+; -2.402 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.540     ; 2.864      ;
+; -2.399 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.322      ;
+; -2.395 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.325      ;
+; -2.385 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.315      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.377 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.299      ;
+; -2.367 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.297      ;
+; -2.367 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.297      ;
+; -2.366 ; control_module:U1|Count_Sec[20]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.830      ;
+; -2.366 ; control_module:U1|Count_Sec[20]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.538     ; 2.830      ;
+; -2.364 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.287      ;
+; -2.356 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.286      ;
+; -2.355 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[15]             ; CLK          ; CLK         ; 1.000        ; -0.073     ; 3.284      ;
+; -2.355 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.278      ;
+; -2.349 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.073     ; 3.278      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.276      ;
+; -2.346 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.079     ; 3.269      ;
+; -2.342 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.272      ;
+; -2.342 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.272      ;
+; -2.342 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.272      ;
+; -2.342 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.272      ;
+; -2.342 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.272      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; control_module:U1|isEn                      ; control_module:U1|isEn                      ; CLK          ; CLK         ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|rTX       ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|isDone    ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.476 ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.743      ;
+; 0.695 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.705 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[16]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.711 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.713 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.980      ;
+; 0.714 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.981      ;
+; 0.714 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.981      ;
+; 0.714 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[0]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.981      ;
+; 0.720 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.987      ;
+; 0.720 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.987      ;
+; 0.735 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.002      ;
+; 0.737 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.004      ;
+; 0.737 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.004      ;
+; 0.754 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.021      ;
+; 0.905 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.172      ;
+; 0.923 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.657      ;
+; 0.992 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.259      ;
+; 1.012 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.279      ;
+; 1.019 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.286      ;
+; 1.026 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.026 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.026 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.293      ;
+; 1.027 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.029 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.030 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; control_module:U1|Count_Sec[17]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.031 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.032 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.299      ;
+; 1.032 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.299      ;
+; 1.033 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.034 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.301      ;
+; 1.034 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.301      ;
+; 1.036 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.303      ;
+; 1.036 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.303      ;
+; 1.039 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.306      ;
+; 1.039 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.306      ;
+; 1.041 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.308      ;
+; 1.041 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.308      ;
+; 1.041 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.308      ;
+; 1.043 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.310      ;
+; 1.045 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.045 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.046 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.046 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[19]             ; CLK          ; CLK         ; 0.000        ; 0.538      ; 1.779      ;
+; 1.047 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.314      ;
+; 1.050 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 0.000        ; 0.538      ; 1.783      ;
+; 1.054 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.321      ;
+; 1.054 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.321      ;
+; 1.054 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.539      ; 1.788      ;
+; 1.057 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[20]             ; CLK          ; CLK         ; 0.000        ; 0.538      ; 1.790      ;
+; 1.057 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.091      ; 1.343      ;
+; 1.077 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.344      ;
+; 1.092 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.359      ;
+; 1.100 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.367      ;
+; 1.112 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.379      ;
+; 1.115 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.382      ;
+; 1.121 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.121 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.388      ;
+; 1.122 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.389      ;
+; 1.125 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.392      ;
+; 1.127 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.394      ;
+; 1.128 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.395      ;
+; 1.128 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.395      ;
+; 1.129 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.396      ;
+; 1.129 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.396      ;
+; 1.129 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.396      ;
+; 1.131 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.398      ;
+; 1.132 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.399      ;
+; 1.134 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 0.000        ; 0.091      ; 1.420      ;
+; 1.134 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.401      ;
+; 1.141 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.408      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                      ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                                         ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; 0.229  ; 0.445        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; 0.274  ; 0.490        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; 0.274  ; 0.490        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; 0.274  ; 0.490        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; 0.275  ; 0.491        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; 0.322  ; 0.506        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; 0.323  ; 0.507        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 7.243 ; 7.546 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 6.970 ; 7.262 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -0.853 ; -21.388           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.186 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -52.085                         ;
++-------+--------+---------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.853 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.799      ;
+; -0.828 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.774      ;
+; -0.777 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.723      ;
+; -0.754 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.704      ;
+; -0.753 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.703      ;
+; -0.743 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.693      ;
+; -0.742 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.692      ;
+; -0.723 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.673      ;
+; -0.712 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.662      ;
+; -0.703 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.649      ;
+; -0.700 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.842      ;
+; -0.694 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.640      ;
+; -0.689 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.635      ;
+; -0.684 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.826      ;
+; -0.678 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.624      ;
+; -0.677 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.427      ;
+; -0.676 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.426      ;
+; -0.674 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.424      ;
+; -0.673 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.423      ;
+; -0.671 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.617      ;
+; -0.671 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.617      ;
+; -0.670 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.420      ;
+; -0.669 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.419      ;
+; -0.669 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.615      ;
+; -0.667 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.617      ;
+; -0.667 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.613      ;
+; -0.665 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.614      ;
+; -0.656 ; control_module:U1|isEn                      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.045     ; 1.598      ;
+; -0.654 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.603      ;
+; -0.652 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.602      ;
+; -0.651 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.601      ;
+; -0.651 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.601      ;
+; -0.646 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.396      ;
+; -0.646 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.396      ;
+; -0.645 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.395      ;
+; -0.643 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.393      ;
+; -0.639 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.389      ;
+; -0.637 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.587      ;
+; -0.636 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.586      ;
+; -0.634 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.776      ;
+; -0.633 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.775      ;
+; -0.628 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.578      ;
+; -0.627 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.573      ;
+; -0.623 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.765      ;
+; -0.621 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.571      ;
+; -0.618 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.760      ;
+; -0.618 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.564      ;
+; -0.615 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.365      ;
+; -0.611 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[15]             ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.560      ;
+; -0.610 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.560      ;
+; -0.609 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.559      ;
+; -0.608 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.558      ;
+; -0.607 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.557      ;
+; -0.607 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.557      ;
+; -0.606 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.556      ;
+; -0.600 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.550      ;
+; -0.598 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.544      ;
+; -0.595 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[15]             ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.544      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.594 ; control_module:U1|isEn                      ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.040     ; 1.541      ;
+; -0.592 ; control_module:U1|Count_Sec[13]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; -0.045     ; 1.534      ;
+; -0.591 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.541      ;
+; -0.588 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.238     ; 1.337      ;
+; -0.586 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.532      ;
+; -0.585 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.238     ; 1.334      ;
+; -0.583 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.533      ;
+; -0.583 ; control_module:U1|Count_Sec[14]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.534      ;
+; -0.582 ; control_module:U1|Count_Sec[14]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.533      ;
+; -0.581 ; control_module:U1|Count_Sec[23]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.238     ; 1.330      ;
+; -0.581 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.527      ;
+; -0.580 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 1.000        ; -0.041     ; 1.526      ;
+; -0.579 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.529      ;
+; -0.578 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.528      ;
+; -0.577 ; control_module:U1|Count_Sec[12]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.527      ;
+; -0.577 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.527      ;
+; -0.577 ; control_module:U1|Count_Sec[20]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.327      ;
+; -0.576 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.526      ;
+; -0.576 ; control_module:U1|Count_Sec[20]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.326      ;
+; -0.572 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.522      ;
+; -0.569 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.711      ;
+; -0.568 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[7]              ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.518      ;
+; -0.568 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[12]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.518      ;
+; -0.567 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.709      ;
+; -0.563 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.512      ;
+; -0.561 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.511      ;
+; -0.559 ; control_module:U1|Count_Sec[13]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 1.000        ; -0.237     ; 1.309      ;
+; -0.557 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[23]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.699      ;
+; -0.557 ; control_module:U1|Count_Sec[19]             ; control_module:U1|Count_Sec[14]             ; CLK          ; CLK         ; 1.000        ; -0.238     ; 1.306      ;
+; -0.555 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 1.000        ; 0.155      ; 1.697      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; control_module:U1|isEn                      ; control_module:U1|isEn                      ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|rTX       ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|isDone    ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.208 ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.328      ;
+; 0.298 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.419      ;
+; 0.303 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; control_module:U1|Count_Sec[11]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[24]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[16]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[0]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.307 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.308 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.428      ;
+; 0.309 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.429      ;
+; 0.310 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.430      ;
+; 0.311 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.431      ;
+; 0.312 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.432      ;
+; 0.318 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.438      ;
+; 0.322 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[1]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.442      ;
+; 0.323 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[3]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.443      ;
+; 0.330 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.450      ;
+; 0.374 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|i[0]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.494      ;
+; 0.407 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.237      ; 0.728      ;
+; 0.447 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.568      ;
+; 0.450 ; control_module:U1|Count_Sec[22]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.578      ;
+; 0.452 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.573      ;
+; 0.453 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.455 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[1]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.576      ;
+; 0.455 ; control_module:U1|Count_Sec[17]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.576      ;
+; 0.456 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.577      ;
+; 0.457 ; TX_module:U2|tx_control_module:U2|i[2]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; control_module:U1|Count_Sec[21]             ; control_module:U1|Count_Sec[21]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.579      ;
+; 0.458 ; control_module:U1|Count_Sec[0]              ; control_module:U1|Count_Sec[2]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.579      ;
+; 0.459 ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.579      ;
+; 0.462 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.462 ; control_module:U1|Count_Sec[10]             ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.462 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.583      ;
+; 0.463 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.465 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; control_module:U1|Count_Sec[2]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.465 ; control_module:U1|Count_Sec[8]              ; control_module:U1|Count_Sec[10]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.466 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.466 ; control_module:U1|Count_Sec[4]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.466 ; control_module:U1|Count_Sec[16]             ; control_module:U1|Count_Sec[18]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.587      ;
+; 0.467 ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.467 ; control_module:U1|Count_Sec[6]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.468 ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.469 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.589      ;
+; 0.469 ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.589      ;
+; 0.470 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|rTX       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.590      ;
+; 0.470 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.590      ;
+; 0.470 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.590      ;
+; 0.472 ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.592      ;
+; 0.473 ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.593      ;
+; 0.480 ; TX_module:U2|tx_control_module:U2|i[3]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.600      ;
+; 0.482 ; TX_module:U2|tx_control_module:U2|i[1]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.602      ;
+; 0.484 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|i[2]      ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.604      ;
+; 0.484 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[22]             ; CLK          ; CLK         ; 0.000        ; 0.237      ; 0.805      ;
+; 0.486 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[20]             ; CLK          ; CLK         ; 0.000        ; 0.237      ; 0.807      ;
+; 0.487 ; TX_module:U2|tx_control_module:U2|i[0]      ; TX_module:U2|tx_control_module:U2|isDone    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.607      ;
+; 0.489 ; control_module:U1|Count_Sec[24]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 0.000        ; 0.237      ; 0.810      ;
+; 0.489 ; control_module:U1|Count_Sec[18]             ; control_module:U1|Count_Sec[19]             ; CLK          ; CLK         ; 0.000        ; 0.237      ; 0.810      ;
+; 0.499 ; control_module:U1|Count_Sec[25]             ; control_module:U1|Count_Sec[25]             ; CLK          ; CLK         ; 0.000        ; 0.045      ; 0.628      ;
+; 0.510 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[3]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.631      ;
+; 0.513 ; control_module:U1|Count_Sec[1]              ; control_module:U1|Count_Sec[4]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.634      ;
+; 0.515 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[5]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.636      ;
+; 0.517 ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.637      ;
+; 0.517 ; control_module:U1|Count_Sec[9]              ; control_module:U1|Count_Sec[11]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.638      ;
+; 0.518 ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.638      ;
+; 0.518 ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.638      ;
+; 0.518 ; control_module:U1|Count_Sec[3]              ; control_module:U1|Count_Sec[6]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.639      ;
+; 0.519 ; control_module:U1|Count_Sec[17]             ; control_module:U1|Count_Sec[17]             ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; control_module:U1|Count_Sec[7]              ; control_module:U1|Count_Sec[9]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; control_module:U1|Count_Sec[5]              ; control_module:U1|Count_Sec[8]              ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.640      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                                             ;
++--------+--------------+----------------+-----------------+-------+------------+---------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                                      ;
++--------+--------------+----------------+-----------------+-------+------------+---------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; CLK   ; Rise       ; CLK                                         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[13]             ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[19]             ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[20]             ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[22]             ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[23]             ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[25]             ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[14]             ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[15]             ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|isEn                      ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[0]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[10] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[11] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[12] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[1]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[2]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[3]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[4]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[5]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[6]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[7]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[8]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_bps_module:U1|Count_BPS[9]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[0]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[10]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[11]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[12]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[16]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[17]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[18]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[1]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[21]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[24]             ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[2]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[3]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[4]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[5]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[6]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[7]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[8]              ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; control_module:U1|Count_Sec[9]              ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[0]      ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[1]      ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[2]      ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|i[3]      ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|isDone    ;
+; -0.063 ; 0.121        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; TX_module:U2|tx_control_module:U2|rTX       ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[13]|clk                        ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[19]|clk                        ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[20]|clk                        ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[22]|clk                        ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[23]|clk                        ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[25]|clk                        ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U1|Count_Sec[14]|clk                        ;
++--------+--------------+----------------+-----------------+-------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 3.932 ; 3.775 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 3.806 ; 3.653 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.334   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  CLK             ; -3.334   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -105.455 ; 0.0   ; 0.0      ; 0.0     ; -71.402             ;
+;  CLK             ; -105.455 ; 0.000 ; N/A      ; N/A     ; -71.402             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 8.045 ; 8.170 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; TX_Pin_Out ; CLK        ; 3.806 ; 3.653 ; Rise       ; CLK             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; TX_Pin_Out    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RST_N                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TX_Pin_Out    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TX_Pin_Out    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; TX_Pin_Out    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 1099     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 1099     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 46    ; 46   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Wed Sep 14 11:05:04 2016
+Info: Command: quartus_sta TX_module_Demo -c TX_module_Demo
+Info: qsta_default_script.tcl version: #11
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'TX_module_Demo.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.334
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.334            -105.455 CLK 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -71.402 CLK 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.033
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.033             -93.970 CLK 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -71.402 CLK 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.853
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.853             -21.388 CLK 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -52.085 CLK 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 665 megabytes
+    Info: Processing ended: Wed Sep 14 11:05:06 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

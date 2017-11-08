@@ -1,0 +1,107 @@
+|TX_module
+CLK => CLK.IN2
+RST_N => RST_N.IN2
+TX_En_Sig => TX_En_Sig.IN2
+TX_Data[0] => TX_Data[0].IN1
+TX_Data[1] => TX_Data[1].IN1
+TX_Data[2] => TX_Data[2].IN1
+TX_Data[3] => TX_Data[3].IN1
+TX_Data[4] => TX_Data[4].IN1
+TX_Data[5] => TX_Data[5].IN1
+TX_Data[6] => TX_Data[6].IN1
+TX_Data[7] => TX_Data[7].IN1
+TX_Done_Sig << tx_control_module:U2.TX_Done_Sig
+TX_Pin_Out << tx_control_module:U2.TX_Pin_Out
+
+
+|TX_module|tx_bps_module:U1
+CLK => Count_BPS[0].CLK
+CLK => Count_BPS[1].CLK
+CLK => Count_BPS[2].CLK
+CLK => Count_BPS[3].CLK
+CLK => Count_BPS[4].CLK
+CLK => Count_BPS[5].CLK
+CLK => Count_BPS[6].CLK
+CLK => Count_BPS[7].CLK
+CLK => Count_BPS[8].CLK
+CLK => Count_BPS[9].CLK
+CLK => Count_BPS[10].CLK
+CLK => Count_BPS[11].CLK
+CLK => Count_BPS[12].CLK
+RST_N => Count_BPS[0].ACLR
+RST_N => Count_BPS[1].ACLR
+RST_N => Count_BPS[2].ACLR
+RST_N => Count_BPS[3].ACLR
+RST_N => Count_BPS[4].ACLR
+RST_N => Count_BPS[5].ACLR
+RST_N => Count_BPS[6].ACLR
+RST_N => Count_BPS[7].ACLR
+RST_N => Count_BPS[8].ACLR
+RST_N => Count_BPS[9].ACLR
+RST_N => Count_BPS[10].ACLR
+RST_N => Count_BPS[11].ACLR
+RST_N => Count_BPS[12].ACLR
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+Count_Sig => Count_BPS.OUTPUTSELECT
+BPS_CLK <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TX_module|tx_control_module:U2
+CLK => isDone.CLK
+CLK => i[0].CLK
+CLK => i[1].CLK
+CLK => i[2].CLK
+CLK => i[3].CLK
+CLK => rTX.CLK
+RST_N => isDone.ACLR
+RST_N => i[0].ACLR
+RST_N => i[1].ACLR
+RST_N => i[2].ACLR
+RST_N => i[3].ACLR
+RST_N => rTX.PRESET
+TX_En_Sig => isDone.ENA
+TX_En_Sig => rTX.ENA
+TX_En_Sig => i[3].ENA
+TX_En_Sig => i[2].ENA
+TX_En_Sig => i[1].ENA
+TX_En_Sig => i[0].ENA
+TX_Data[0] => Mux0.IN10
+TX_Data[1] => Mux0.IN9
+TX_Data[2] => Mux0.IN8
+TX_Data[3] => Mux0.IN7
+TX_Data[4] => Mux0.IN6
+TX_Data[5] => Mux0.IN5
+TX_Data[6] => Mux0.IN4
+TX_Data[7] => Mux0.IN3
+BPS_CLK => rTX.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => rTX.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => rTX.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => isDone.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => i.OUTPUTSELECT
+BPS_CLK => isDone.OUTPUTSELECT
+TX_Done_Sig <= isDone.DB_MAX_OUTPUT_PORT_TYPE
+TX_Pin_Out <= rTX.DB_MAX_OUTPUT_PORT_TYPE
+
+

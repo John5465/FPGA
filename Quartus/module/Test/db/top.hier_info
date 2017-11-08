@@ -1,0 +1,31 @@
+|top
+a1 => a1.IN1
+a2 => a2.IN1
+a3 => a3.IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+z[0] <= B:m2.y
+z[1] <= B:m2.y
+z[2] <= B:m2.y
+z[3] <= B:m2.y
+
+
+|top|A:m1
+a => Add0.IN1
+b => Add0.IN2
+c => Add1.IN4
+y[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|B:m2
+a[0] => Mult0.IN1
+a[1] => Mult0.IN0
+b[0] => Mult0.IN3
+b[1] => Mult0.IN2
+y[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+

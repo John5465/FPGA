@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dD:/workspace1/NewDocument/Quartus/verilog_EX2/simulation/modelsim
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1461211107
+VgNKYT[TjXLiDgzCJ^PhOY1
+04 19 4 work verilog_ex2_vlg_tst fast 0
+=1-f8a9632d3c6c-57184fe3-8a-1c4c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2c;57
+vverilog_ex2
+I^WImiHclzdAig75hkGgkA0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dD:/workspace1/NewDocument/Quartus/verilog_EX2/simulation/modelsim
+w1461208947
+8D:/workspace1/NewDocument/Quartus/verilog_EX2/verilog_ex2.v
+FD:/workspace1/NewDocument/Quartus/verilog_EX2/verilog_ex2.v
+L0 21
+Z3 OL;L;10.2c;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z5 !s110 1461211106
+!s100 g9PT?8gn]h?mN]zl>cNZb3
+!s108 1461211106.556000
+!s107 D:/workspace1/NewDocument/Quartus/verilog_EX2/verilog_ex2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/workspace1/NewDocument/Quartus/verilog_EX2|D:/workspace1/NewDocument/Quartus/verilog_EX2/verilog_ex2.v|
+!s92 -vlog01compat -work work +incdir+D:/workspace1/NewDocument/Quartus/verilog_EX2 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!i111 0
+vverilog_ex2_vlg_tst
+R5
+I]>QWk3BMN<jOT3Pb67=z<3
+R1
+R2
+w1258791807
+8D:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim/verilog_ex2.vt
+FD:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim/verilog_ex2.vt
+L0 28
+R3
+r1
+31
+R4
+!i10b 1
+!s100 hRNllV4^E^hbn2IlIN:=L3
+!s85 0
+!s108 1461211106.745000
+!s107 D:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim/verilog_ex2.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim|D:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim/verilog_ex2.vt|
+!i111 0
+!s92 -vlog01compat -work work +incdir+D:/workspace1/NewDocument/Quartus/verilog_EX2/../../../../Documents/FPGA/guangpan/FPGA/Lesson6/verilog_EX2/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

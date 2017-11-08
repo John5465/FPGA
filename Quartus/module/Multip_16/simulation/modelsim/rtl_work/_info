@@ -1,0 +1,62 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dD:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1461396634
+V8gRP5N:V4HEiOo7d1BjfB0
+04 17 4 work Multip_16_vlg_tst fast 0
+=1-f8a9632d3c6c-571b249a-65-1a38
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.2c;57
+vMultip_16
+InF^jQ6_6Bce:<R@:I`GH;1
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dD:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim
+w1461395883
+8D:/workspace1/NewDocument/Quartus/Multip_16/Multip_16.v
+FD:/workspace1/NewDocument/Quartus/Multip_16/Multip_16.v
+L0 7
+Z3 OL;L;10.2c;57
+r1
+31
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@multip_16
+Z5 !s110 1461396633
+!s100 SYeBI@BImaFj<IKOQ87jI3
+!s108 1461396633.250000
+!s107 D:/workspace1/NewDocument/Quartus/Multip_16/Multip_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/workspace1/NewDocument/Quartus/Multip_16|D:/workspace1/NewDocument/Quartus/Multip_16/Multip_16.v|
+!s92 -vlog01compat -work work +incdir+D:/workspace1/NewDocument/Quartus/Multip_16 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!i111 0
+vMultip_16_vlg_tst
+R5
+ICJg1hnVMM9Me1?SXKW[2P2
+R1
+R2
+w1461396155
+8D:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim/Multip_16.vt
+FD:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim/Multip_16.vt
+L0 29
+R3
+r1
+31
+R4
+n@multip_16_vlg_tst
+!i10b 1
+!s100 kjWNP2eX5_J>]o?BK3R[?3
+!s85 0
+!s108 1461396633.517000
+!s107 D:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim/Multip_16.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim|D:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim/Multip_16.vt|
+!i111 0
+!s92 -vlog01compat -work work +incdir+D:/workspace1/NewDocument/Quartus/Multip_16/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

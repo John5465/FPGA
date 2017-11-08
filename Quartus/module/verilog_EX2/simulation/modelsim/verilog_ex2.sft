@@ -1,0 +1,4 @@
+set tool_name "ModelSim (Verilog)"
+set corner_file_list {
+    {{"Slow Model"} {verilog_ex2.vo verilog_ex2_v.sdo}}
+}

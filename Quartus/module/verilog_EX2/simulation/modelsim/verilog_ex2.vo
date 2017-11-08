@@ -1,0 +1,132 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 15.0.0 Build 145 04/22/2015 SJ Full Version"
+
+// DATE "04/21/2016 12:03:15"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module verilog_ex2 (
+	clk,
+	rst_n,
+	clk_div);
+input 	clk;
+input 	rst_n;
+output 	clk_div;
+
+// Design Ports Information
+// clk_div	=>  Location: PIN_8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+// clk	=>  Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+// rst_n	=>  Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("verilog_ex2_v.sdo");
+// synopsys translate_on
+
+wire \clk~combout ;
+wire \rst_n~combout ;
+wire \cnt~regout ;
+
+
+// Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \clk~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\clk~combout ),
+	.padio(clk));
+// synopsys translate_off
+defparam \clk~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \rst_n~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\rst_n~combout ),
+	.padio(rst_n));
+// synopsys translate_off
+defparam \rst_n~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N2
+maxii_lcell cnt(
+// Equation(s):
+// \cnt~regout  = DFFEAS((((!\cnt~regout ))), \clk~combout , \rst_n~combout , , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\cnt~regout ),
+	.aclr(!\rst_n~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\cnt~regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam cnt.lut_mask = "00ff";
+defparam cnt.operation_mode = "normal";
+defparam cnt.output_mode = "reg_only";
+defparam cnt.register_cascade_mode = "off";
+defparam cnt.sum_lutc_input = "datac";
+defparam cnt.synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \clk_div~I (
+	.datain(\cnt~regout ),
+	.oe(vcc),
+	.combout(),
+	.padio(clk_div));
+// synopsys translate_off
+defparam \clk_div~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

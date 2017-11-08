@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, D:/workspace1/NewDocument/Quartus/verilog_EX2/verilog_ex2.v
+source_file = 1, D:/workspace1/NewDocument/Quartus/verilog_EX2/db/verilog_ex2.cbx.xml
+design_name = verilog_ex2
+instance = comp, \clk~I , clk, verilog_ex2, 1
+instance = comp, \rst_n~I , rst_n, verilog_ex2, 1
+instance = comp, \clk_div~I , clk_div, verilog_ex2, 1

@@ -1,0 +1,8 @@
+module tx_control_module
+(
+	CLK,RST_N,
+	TX_En_Sig,TX_Data,BPS_CLK,
+	TX_Done_Sig,TX_Pin_Out
+);
+
+endmodule

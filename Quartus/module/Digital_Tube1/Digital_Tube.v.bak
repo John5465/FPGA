@@ -1,0 +1,11 @@
+
+
+
+
+module Digital_Tube(
+	clk,rst_n,
+
+)
+
+
+endmodule

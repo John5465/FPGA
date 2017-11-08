@@ -1,0 +1,8 @@
+module Debounce_module(
+	CLK,RST_N,
+	Pin_In,
+	Pin_Out
+);
+	
+
+endmodule

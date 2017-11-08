@@ -1,0 +1,17 @@
+Quartus II Archive log --	D:/workspace1/NewDocument/Quartus/Test/top.qarlog
+
+Archive:	D:/workspace1/NewDocument/Quartus/Test/top.qar
+Date:		Mon May 16 14:56:09 2016
+Quartus II 64-Bit		15.0.0 Build 145 04/22/2015 SJ Full Version
+
+	=========== Files Selected: ===========
+D:/workspace1/NewDocument/Quartus/Test/A.v
+D:/workspace1/NewDocument/Quartus/Test/B.v
+D:/workspace1/NewDocument/Quartus/Test/top.qpf
+D:/workspace1/NewDocument/Quartus/Test/top.qsf
+D:/workspace1/NewDocument/Quartus/Test/top.v
+d:/install/alturalquartus15/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

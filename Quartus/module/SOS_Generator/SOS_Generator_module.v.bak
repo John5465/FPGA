@@ -1,0 +1,18 @@
+module SOS_Generator_module
+(
+		CLK,RST_N
+		Pin_Out
+);
+
+input CLK;
+input RST_N;
+output Pin_Out;
+
+
+
+
+
+
+
+
+endmodule

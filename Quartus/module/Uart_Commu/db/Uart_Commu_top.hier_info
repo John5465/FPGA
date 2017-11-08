@@ -1,0 +1,24 @@
+|Uart_Commu_top
+clk => clk.IN1
+rst_n => rst_n.IN1
+rs232_rx => rs232_rx.IN1
+rs232_tx => ~NO_FANOUT~
+
+
+|Uart_Commu_top|Uart_Rx:Uart_Rx
+clk => ~NO_FANOUT~
+rst_n => ~NO_FANOUT~
+rs232_rx => ~NO_FANOUT~
+rx_data[0] <= <GND>
+rx_data[1] <= <GND>
+rx_data[2] <= <GND>
+rx_data[3] <= <GND>
+rx_data[4] <= <GND>
+rx_data[5] <= <GND>
+rx_data[6] <= <GND>
+rx_data[7] <= <GND>
+rx_int <= <GND>
+clk_bps => ~NO_FANOUT~
+bps_start <= <GND>
+
+

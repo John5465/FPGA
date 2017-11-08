@@ -1,0 +1,11 @@
+module Control_module
+(
+	CLK,RST_N,
+	SOS_En_Sig
+);
+
+
+
+
+
+endmodule

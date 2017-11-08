@@ -1,0 +1,21 @@
+module control_module
+(
+	CLK,RST_N,
+	TX_Done_Sig,
+	TX_En_Sig,TX_Data
+);
+
+input CLK;
+input RST_N;
+input TX_Done_Sig;
+output TX_En_Sig;
+output[7:0] TX_Data;
+
+/****************************************/
+
+
+
+
+
+
+endmodule

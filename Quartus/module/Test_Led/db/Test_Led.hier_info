@@ -1,0 +1,6 @@
+|Test_Led
+CLK => ~NO_FANOUT~
+RSTn => ~NO_FANOUT~
+led <= <VCC>
+
+

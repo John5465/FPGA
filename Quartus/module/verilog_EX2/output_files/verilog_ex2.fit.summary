@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Apr 21 12:03:07 2016
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : verilog_ex2
+Top-level Entity Name : verilog_ex2
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 1 / 240 ( < 1 % )
+Total pins : 3 / 80 ( 4 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

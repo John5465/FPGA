@@ -1,0 +1,1605 @@
+TimeQuest Timing Analyzer report for Debounce_module
+Wed Sep 21 17:34:01 2016
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'CLK'
+ 13. Slow 1200mV 85C Model Hold: 'CLK'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Slow 1200mV 85C Model Metastability Summary
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Setup: 'CLK'
+ 27. Slow 1200mV 0C Model Hold: 'CLK'
+ 28. Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Slow 1200mV 0C Model Metastability Summary
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Setup: 'CLK'
+ 40. Fast 1200mV 0C Model Hold: 'CLK'
+ 41. Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'
+ 42. Setup Times
+ 43. Hold Times
+ 44. Clock to Output Times
+ 45. Minimum Clock to Output Times
+ 46. Fast 1200mV 0C Model Metastability Summary
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Board Trace Model Assignments
+ 53. Input Transition Times
+ 54. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 55. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 56. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 57. Setup Transfers
+ 58. Hold Transfers
+ 59. Report TCCS
+ 60. Report RSKM
+ 61. Unconstrained Paths
+ 62. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name      ; Debounce_module                                     ;
+; Device Family      ; Cyclone IV E                                        ;
+; Device Name        ; EP4CE6F17C8                                         ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 248.57 MHz ; 248.57 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; CLK   ; -3.023 ; -94.126            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; CLK   ; 0.436 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; CLK   ; -3.000 ; -65.454                          ;
++-------+--------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'CLK'                                                                                                      ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.023 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.449      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.002 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.923      ;
+; -3.001 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.921      ;
+; -2.913 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.339      ;
+; -2.902 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.822      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.861 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.782      ;
+; -2.854 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.774      ;
+; -2.853 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.773      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.817 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.737      ;
+; -2.809 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.235      ;
+; -2.809 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.575     ; 3.235      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.802 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.722      ;
+; -2.788 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.709      ;
+; -2.788 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.709      ;
+; -2.788 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.080     ; 3.709      ;
+; -2.769 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.689      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.763 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.683      ;
+; -2.760 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|i.01       ; CLK          ; CLK         ; 1.000        ; -0.536     ; 3.225      ;
+; -2.757 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.677      ;
+; -2.755 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.675      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.710 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.630      ;
+; -2.707 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.627      ;
+; -2.706 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.626      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
+; -2.704 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.081     ; 3.624      ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'CLK'                                                                                                       ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.436 ; Delay_module:U2|Count_MS[2] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 0.746      ;
+; 0.436 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 0.746      ;
+; 0.448 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[0] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 0.758      ;
+; 0.454 ; Delay_module:U2|rPin_Out    ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; Delay_module:U2|isCount     ; Delay_module:U2|isCount     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; Delay_module:U2|i.00        ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.454 ; Detect_module:U1|isEn       ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.746      ;
+; 0.466 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.758      ;
+; 0.491 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.783      ;
+; 0.524 ; Delay_module:U2|i.00        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.816      ;
+; 0.632 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.419      ;
+; 0.651 ; Detect_module:U1|isEn       ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.943      ;
+; 0.707 ; Detect_module:U1|H2L_F1     ; Detect_module:U1|H2L_F2     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.999      ;
+; 0.738 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 1.048      ;
+; 0.744 ; Delay_module:U2|Count1[15]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.056      ;
+; 0.744 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.100      ; 1.056      ;
+; 0.746 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.038      ;
+; 0.746 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.038      ;
+; 0.747 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.747 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.039      ;
+; 0.748 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.040      ;
+; 0.748 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 1.058      ;
+; 0.749 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.098      ; 1.059      ;
+; 0.750 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.042      ;
+; 0.750 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.042      ;
+; 0.753 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.540      ;
+; 0.754 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.541      ;
+; 0.761 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[13]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.763 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.056      ;
+; 0.764 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.765 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.767 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.059      ;
+; 0.770 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.557      ;
+; 0.786 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.079      ;
+; 0.800 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.587      ;
+; 0.807 ; Delay_module:U2|i.00        ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.099      ;
+; 0.862 ; Detect_module:U1|L2H_F2     ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.154      ;
+; 0.874 ; Detect_module:U1|H2L_F2     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.166      ;
+; 0.893 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.680      ;
+; 0.912 ; Detect_module:U1|L2H_F1     ; Detect_module:U1|L2H_F2     ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.204      ;
+; 0.912 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.699      ;
+; 0.912 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.699      ;
+; 0.928 ; Delay_module:U2|Count1[12]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.715      ;
+; 0.962 ; Delay_module:U2|i.01        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.254      ;
+; 1.002 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.293      ;
+; 1.033 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.820      ;
+; 1.051 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.838      ;
+; 1.052 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.839      ;
+; 1.069 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.856      ;
+; 1.100 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.392      ;
+; 1.101 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.393      ;
+; 1.101 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.393      ;
+; 1.102 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.394      ;
+; 1.102 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.394      ;
+; 1.108 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.400      ;
+; 1.109 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.401      ;
+; 1.109 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.401      ;
+; 1.109 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.401      ;
+; 1.111 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.403      ;
+; 1.111 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.403      ;
+; 1.115 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.408      ;
+; 1.116 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.116 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.409      ;
+; 1.117 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.410      ;
+; 1.118 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.118 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.410      ;
+; 1.120 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.907      ;
+; 1.120 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.907      ;
+; 1.120 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.412      ;
+; 1.120 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.412      ;
+; 1.124 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.124 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.417      ;
+; 1.125 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.418      ;
+; 1.126 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.419      ;
+; 1.133 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.133 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.426      ;
+; 1.134 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.427      ;
+; 1.135 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.135 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.428      ;
+; 1.146 ; Detect_module:U1|Count1[12] ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.439      ;
+; 1.149 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.081      ; 1.442      ;
+; 1.154 ; Detect_module:U1|H2L_F1     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.446      ;
+; 1.172 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.959      ;
+; 1.174 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.961      ;
+; 1.188 ; Detect_module:U1|isEn       ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.480      ;
+; 1.190 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.977      ;
+; 1.190 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.575      ; 1.977      ;
+; 1.231 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.523      ;
+; 1.232 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.524      ;
+; 1.232 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 1.524      ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'CLK'                                                             ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                         ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; 0.263  ; 0.483        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; 0.263  ; 0.483        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; 0.263  ; 0.483        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; 0.263  ; 0.483        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; 0.266  ; 0.486        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; 0.266  ; 0.486        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; 0.286  ; 0.506        ; 0.220          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; 0.305  ; 0.493        ; 0.188          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; Pin_In    ; CLK        ; -0.193 ; -0.059 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; 0.614 ; 0.487 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 8.256 ; 8.071 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 7.965 ; 7.786 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 262.74 MHz ; 250.0 MHz       ; CLK        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -2.806 ; -85.104           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.385 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -65.454                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'CLK'                                                                                                       ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.806 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.273      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.748 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.678      ;
+; -2.634 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.564      ;
+; -2.595 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.062      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.593 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.523      ;
+; -2.591 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.058      ;
+; -2.591 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.535     ; 3.058      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.558 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.488      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.549 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.479      ;
+; -2.544 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.474      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.540 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.470      ;
+; -2.533 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.463      ;
+; -2.533 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.463      ;
+; -2.533 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.463      ;
+; -2.508 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.438      ;
+; -2.506 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.436      ;
+; -2.468 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|i.01       ; CLK          ; CLK         ; 1.000        ; -0.496     ; 2.974      ;
+; -2.462 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.392      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.441 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.371      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
+; -2.438 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.072     ; 3.368      ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'CLK'                                                                                                        ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.385 ; Delay_module:U2|Count_MS[2] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.669      ;
+; 0.385 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.669      ;
+; 0.400 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[0] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.684      ;
+; 0.402 ; Delay_module:U2|rPin_Out    ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Delay_module:U2|isCount     ; Delay_module:U2|isCount     ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Delay_module:U2|i.00        ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; Detect_module:U1|isEn       ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.669      ;
+; 0.417 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.684      ;
+; 0.453 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.720      ;
+; 0.485 ; Delay_module:U2|i.00        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.752      ;
+; 0.567 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.297      ;
+; 0.608 ; Detect_module:U1|isEn       ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.875      ;
+; 0.655 ; Detect_module:U1|H2L_F1     ; Detect_module:U1|H2L_F2     ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.922      ;
+; 0.658 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.388      ;
+; 0.665 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.395      ;
+; 0.686 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.416      ;
+; 0.688 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.972      ;
+; 0.690 ; Delay_module:U2|Count1[15]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.090      ; 0.975      ;
+; 0.691 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.090      ; 0.976      ;
+; 0.694 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.961      ;
+; 0.694 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.961      ;
+; 0.694 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.424      ;
+; 0.695 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.695 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.696 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.963      ;
+; 0.696 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.963      ;
+; 0.696 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.963      ;
+; 0.697 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.699 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.966      ;
+; 0.699 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.966      ;
+; 0.699 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.983      ;
+; 0.700 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.089      ; 0.984      ;
+; 0.705 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.706 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[13]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.712 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.979      ;
+; 0.717 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 0.984      ;
+; 0.734 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.001      ;
+; 0.752 ; Delay_module:U2|i.00        ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.019      ;
+; 0.780 ; Detect_module:U1|L2H_F2     ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.047      ;
+; 0.780 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.510      ;
+; 0.791 ; Detect_module:U1|H2L_F2     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.058      ;
+; 0.805 ; Delay_module:U2|Count1[12]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.535      ;
+; 0.810 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.540      ;
+; 0.811 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.541      ;
+; 0.847 ; Detect_module:U1|L2H_F1     ; Detect_module:U1|L2H_F2     ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.114      ;
+; 0.890 ; Delay_module:U2|i.01        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.157      ;
+; 0.892 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 1.158      ;
+; 0.902 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.632      ;
+; 0.930 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.660      ;
+; 0.931 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.661      ;
+; 0.933 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.663      ;
+; 1.013 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.280      ;
+; 1.013 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.280      ;
+; 1.015 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.282      ;
+; 1.015 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.282      ;
+; 1.016 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.283      ;
+; 1.018 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.285      ;
+; 1.018 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.285      ;
+; 1.019 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.286      ;
+; 1.019 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.286      ;
+; 1.020 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.287      ;
+; 1.021 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.288      ;
+; 1.027 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.027 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.294      ;
+; 1.028 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.028 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.295      ;
+; 1.029 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.296      ;
+; 1.029 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.759      ;
+; 1.030 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.030 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.297      ;
+; 1.031 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.761      ;
+; 1.031 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.761      ;
+; 1.031 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.298      ;
+; 1.031 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.761      ;
+; 1.033 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.033 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.300      ;
+; 1.035 ; Detect_module:U1|Count1[12] ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.073      ; 1.303      ;
+; 1.038 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.073      ; 1.306      ;
+; 1.042 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.309      ;
+; 1.044 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.311      ;
+; 1.044 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.311      ;
+; 1.045 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.312      ;
+; 1.046 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.313      ;
+; 1.052 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.782      ;
+; 1.052 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.535      ; 1.782      ;
+; 1.080 ; Detect_module:U1|H2L_F1     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.347      ;
+; 1.102 ; Detect_module:U1|isEn       ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.369      ;
+; 1.113 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.380      ;
+; 1.116 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.383      ;
+; 1.116 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.072      ; 1.383      ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; CLK   ; Rise       ; CLK                         ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; -1.487 ; 1.000        ; 2.487          ; Min Period       ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; 0.233  ; 0.449        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; 0.233  ; 0.449        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; 0.235  ; 0.451        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; 0.235  ; 0.451        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; 0.235  ; 0.451        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; 0.235  ; 0.451        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; 0.276  ; 0.492        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; 0.277  ; 0.493        ; 0.216          ; High Pulse Width ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; 0.321  ; 0.505        ; 0.184          ; Low Pulse Width  ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; -0.169 ; 0.031 ; Rise       ; CLK             ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; 0.549 ; 0.366 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 7.595 ; 7.278 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 7.309 ; 7.003 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; CLK   ; -0.715 ; -17.801           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; CLK   ; 0.180 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; CLK   ; -3.000 ; -47.815                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'CLK'                                                                                                       ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.715 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.666      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.677 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.628      ;
+; -0.666 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.617      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.666 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.418      ;
+; -0.647 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.598      ;
+; -0.644 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.595      ;
+; -0.643 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.395      ;
+; -0.606 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.557      ;
+; -0.606 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.557      ;
+; -0.606 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.557      ;
+; -0.599 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.550      ;
+; -0.598 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.549      ;
+; -0.596 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.547      ;
+; -0.595 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.347      ;
+; -0.595 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.235     ; 1.347      ;
+; -0.591 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|i.01       ; CLK          ; CLK         ; 1.000        ; -0.220     ; 1.358      ;
+; -0.581 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[11] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.532      ;
+; -0.576 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[14] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.527      ;
+; -0.576 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[12] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.527      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.575 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.526      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.573 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.524      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.571 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.522      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[6]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[7]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[8]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[10] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.563 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[13] ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.514      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[0]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[1]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[2]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
+; -0.555 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[5]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.506      ;
++--------+-----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'CLK'                                                                                                        ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.180 ; Delay_module:U2|Count_MS[2] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.180 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.307      ;
+; 0.187 ; Delay_module:U2|rPin_Out    ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[0] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.314      ;
+; 0.187 ; Delay_module:U2|isCount     ; Delay_module:U2|isCount     ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Delay_module:U2|i.00        ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; Detect_module:U1|isEn       ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.314      ;
+; 0.196 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.316      ;
+; 0.213 ; Delay_module:U2|i.00        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.333      ;
+; 0.259 ; Detect_module:U1|isEn       ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.379      ;
+; 0.266 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.585      ;
+; 0.272 ; Detect_module:U1|H2L_F1     ; Detect_module:U1|H2L_F2     ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.392      ;
+; 0.296 ; Delay_module:U2|Count1[15]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.424      ;
+; 0.297 ; Delay_module:U2|Count_MS[1] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.298 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.418      ;
+; 0.298 ; Delay_module:U2|Count1[9]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.426      ;
+; 0.299 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.300 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.300 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.420      ;
+; 0.303 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.430      ;
+; 0.304 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[13]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; Delay_module:U2|Count_MS[0] ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.043      ; 0.432      ;
+; 0.306 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.427      ;
+; 0.316 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[0]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.436      ;
+; 0.318 ; Delay_module:U2|Count1[13]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.637      ;
+; 0.319 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.638      ;
+; 0.326 ; Delay_module:U2|i.00        ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.446      ;
+; 0.331 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.650      ;
+; 0.334 ; Delay_module:U2|Count1[14]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.653      ;
+; 0.340 ; Detect_module:U1|L2H_F1     ; Detect_module:U1|L2H_F2     ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.460      ;
+; 0.347 ; Detect_module:U1|L2H_F2     ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.467      ;
+; 0.351 ; Detect_module:U1|H2L_F2     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.471      ;
+; 0.374 ; Delay_module:U2|i.01        ; Delay_module:U2|rPin_Out    ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.494      ;
+; 0.384 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.703      ;
+; 0.385 ; Delay_module:U2|Count1[12]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.704      ;
+; 0.393 ; Detect_module:U1|Count1[0]  ; Detect_module:U1|Count1[1]  ; CLK          ; CLK         ; 0.000        ; 0.035      ; 0.512      ;
+; 0.398 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.717      ;
+; 0.398 ; Delay_module:U2|Count1[10]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.717      ;
+; 0.445 ; Detect_module:U1|Count1[12] ; Detect_module:U1|isEn       ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.566      ;
+; 0.447 ; Detect_module:U1|Count1[12] ; Detect_module:U1|Count1[0]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.568      ;
+; 0.447 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.567      ;
+; 0.448 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.448 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.568      ;
+; 0.449 ; Detect_module:U1|Count1[2]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.569      ;
+; 0.449 ; Detect_module:U1|Count1[6]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.569      ;
+; 0.449 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.768      ;
+; 0.453 ; Delay_module:U2|Count1[3]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.454 ; Delay_module:U2|Count1[1]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; Delay_module:U2|Count1[5]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.455 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.774      ;
+; 0.455 ; Delay_module:U2|isCount     ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.774      ;
+; 0.455 ; Delay_module:U2|Count1[7]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; Detect_module:U1|H2L_F1     ; Delay_module:U2|i.01        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.457 ; Detect_module:U1|Count1[11] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[2]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[4]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[8]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.458 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.578      ;
+; 0.460 ; Detect_module:U1|Count1[1]  ; Detect_module:U1|Count1[3]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.580      ;
+; 0.461 ; Detect_module:U1|Count1[3]  ; Detect_module:U1|Count1[5]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.581      ;
+; 0.461 ; Detect_module:U1|Count1[9]  ; Detect_module:U1|Count1[11] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.581      ;
+; 0.461 ; Detect_module:U1|Count1[7]  ; Detect_module:U1|Count1[9]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.581      ;
+; 0.461 ; Detect_module:U1|Count1[5]  ; Detect_module:U1|Count1[7]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.581      ;
+; 0.463 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[1]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.583      ;
+; 0.463 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[9]   ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.782      ;
+; 0.464 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[3]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[7]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.584      ;
+; 0.464 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.783      ;
+; 0.465 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[5]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.585      ;
+; 0.465 ; Delay_module:U2|Count1[11]  ; Delay_module:U2|Count1[15]  ; CLK          ; CLK         ; 0.000        ; 0.235      ; 0.784      ;
+; 0.466 ; Delay_module:U2|Count1[0]   ; Delay_module:U2|Count1[2]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.586      ;
+; 0.467 ; Delay_module:U2|Count1[2]   ; Delay_module:U2|Count1[4]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.467 ; Delay_module:U2|Count1[6]   ; Delay_module:U2|Count1[8]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.587      ;
+; 0.468 ; Delay_module:U2|Count1[8]   ; Delay_module:U2|Count1[10]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.468 ; Delay_module:U2|Count1[4]   ; Delay_module:U2|Count1[6]   ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.588      ;
+; 0.485 ; Detect_module:U1|isEn       ; Delay_module:U2|i.00        ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.605      ;
+; 0.503 ; Delay_module:U2|isCount     ; Delay_module:U2|Count_MS[2] ; CLK          ; CLK         ; 0.000        ; 0.221      ; 0.808      ;
+; 0.506 ; Delay_module:U2|isCount     ; Delay_module:U2|Count_MS[1] ; CLK          ; CLK         ; 0.000        ; 0.221      ; 0.811      ;
+; 0.509 ; Delay_module:U2|isCount     ; Delay_module:U2|Count_MS[3] ; CLK          ; CLK         ; 0.000        ; 0.221      ; 0.814      ;
+; 0.509 ; Delay_module:U2|isCount     ; Delay_module:U2|Count_MS[0] ; CLK          ; CLK         ; 0.000        ; 0.221      ; 0.814      ;
+; 0.510 ; Detect_module:U1|Count1[4]  ; Detect_module:U1|Count1[6]  ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.630      ;
+; 0.511 ; Detect_module:U1|Count1[10] ; Detect_module:U1|Count1[12] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.631      ;
+; 0.511 ; Detect_module:U1|Count1[8]  ; Detect_module:U1|Count1[10] ; CLK          ; CLK         ; 0.000        ; 0.036      ; 0.631      ;
++-------+-----------------------------+-----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'CLK'                                                             ;
++--------+--------------+----------------+-----------------+-------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target                      ;
++--------+--------------+----------------+-----------------+-------+------------+-----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; CLK   ; Rise       ; CLK                         ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[15]  ;
+; -0.088 ; 0.096        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[9]   ;
+; -0.081 ; 0.103        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[0] ;
+; -0.081 ; 0.103        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[1] ;
+; -0.081 ; 0.103        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[2] ;
+; -0.081 ; 0.103        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count_MS[3] ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[0]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[10]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[13]  ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[1]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[2]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[3]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[4]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[5]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[6]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[7]   ;
+; -0.065 ; 0.119        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[8]   ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[11]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[12]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|Count1[14]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.00        ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|i.01        ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|isCount     ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Delay_module:U2|rPin_Out    ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[0]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[10] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[11] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[12] ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[1]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[2]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[3]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[4]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[5]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[6]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[7]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[8]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|Count1[9]  ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F1     ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|H2L_F2     ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F1     ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|L2H_F2     ;
+; -0.064 ; 0.120        ; 0.184          ; Low Pulse Width ; CLK   ; Rise       ; Detect_module:U1|isEn       ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[15]|clk           ;
+; 0.092  ; 0.092        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[9]|clk            ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count_MS[0]|clk          ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count_MS[1]|clk          ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count_MS[2]|clk          ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count_MS[3]|clk          ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[0]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[10]|clk           ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[13]|clk           ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[1]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[2]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[3]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[4]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[5]|clk            ;
+; 0.115  ; 0.115        ; 0.000          ; Low Pulse Width ; CLK   ; Rise       ; U2|Count1[6]|clk            ;
++--------+--------------+----------------+-----------------+-------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; -0.083 ; 0.239 ; Rise       ; CLK             ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Hold Times                                                             ;
++-----------+------------+-------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+--------+------------+-----------------+
+; Pin_In    ; CLK        ; 0.248 ; -0.068 ; Rise       ; CLK             ;
++-----------+------------+-------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 3.817 ; 3.969 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 3.694 ; 3.841 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.023  ; 0.180 ; N/A      ; N/A     ; -3.000              ;
+;  CLK             ; -3.023  ; 0.180 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -94.126 ; 0.0   ; 0.0      ; 0.0     ; -65.454             ;
+;  CLK             ; -94.126 ; 0.000 ; N/A      ; N/A     ; -65.454             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+------------+--------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; -0.083 ; 0.239 ; Rise       ; CLK             ;
++-----------+------------+--------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_In    ; CLK        ; 0.614 ; 0.487 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 8.256 ; 8.071 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; Pin_Out   ; CLK        ; 3.694 ; 3.841 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin_Out       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RST_N                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Pin_In                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin_Out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin_Out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin_Out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 888      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 888      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 44    ; 44   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Wed Sep 21 17:33:59 2016
+Info: Command: quartus_sta Debounce_module -c Debounce_module
+Info: qsta_default_script.tcl version: #11
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Debounce_module.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.023
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.023             -94.126 CLK 
+Info (332146): Worst-case hold slack is 0.436
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.436               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -65.454 CLK 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.806
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.806             -85.104 CLK 
+Info (332146): Worst-case hold slack is 0.385
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.385               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -65.454 CLK 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.715
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.715             -17.801 CLK 
+Info (332146): Worst-case hold slack is 0.180
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.180               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -47.815 CLK 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 663 megabytes
+    Info: Processing ended: Wed Sep 21 17:34:01 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

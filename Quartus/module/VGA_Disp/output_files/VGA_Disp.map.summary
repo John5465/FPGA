@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jul 14 23:07:02 2017
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : VGA_Disp
+Top-level Entity Name : VGA_Disp
+Family : Cyclone IV E
+Total logic elements : 111
+    Total combinational functions : 111
+    Dedicated logic registers : 23
+Total registers : 23
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
