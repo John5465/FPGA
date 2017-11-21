@@ -1,0 +1,39 @@
+# Reading C:/modeltech64_10.2c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.2c Jul 19 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {DA_TLC5620_tb.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module DA_TLC5620
+# 
+# Top level modules:
+# 	DA_TLC5620
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module DA_TLC5620_tb
+# 
+# Top level modules:
+# 	DA_TLC5620_tb
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.DA_TLC5620_tb glbl 
+# Loading work.DA_TLC5620_tb(fast)
+# Loading work.DA_TLC5620(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3015) DA_TLC5620_tb.v(52): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'LED'. The port definition is at: DA_TLC5620.v(30).
+# 
+#         Region: /DA_TLC5620_tb/uut
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+run 100us

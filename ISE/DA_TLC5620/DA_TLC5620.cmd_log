@@ -1,0 +1,89 @@
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc4vsx35-ff668-12 DA_TLC5620.ngc DA_TLC5620.ngd  
+map -intstyle ise -p xc4vsx35-ff668-12 -global_opt off -cm area -ir off -pr off -c 100 -o DA_TLC5620_map.ncd DA_TLC5620.ngd DA_TLC5620.pcf 
+par -w -intstyle ise -ol high -t 1 DA_TLC5620_map.ncd DA_TLC5620.ncd DA_TLC5620.pcf 
+trce -intstyle ise -v 3 -s 12 -n 3 -fastpaths -xml DA_TLC5620.twx DA_TLC5620.ncd -o DA_TLC5620.twr DA_TLC5620.pcf 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 
+xst -intstyle ise -ifn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.xst" -ofn "D:/workspace1/NewDocument/ISE/DA_TLC5620/DA_TLC5620.syr" 

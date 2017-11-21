@@ -1,0 +1,426 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: DA_TLC5620.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DA_TLC5620.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DA_TLC5620"
+Output Format                      : NGC
+Target Device                      : xc4vsx35-12-ff668
+
+---- Source Options
+Top Module Name                    : DA_TLC5620
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Number of Regional Clock Buffers   : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "DA_TLC5620.v" in library work
+Module <DA_TLC5620> compiled
+No errors in compilation
+Analysis of file <"DA_TLC5620.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <DA_TLC5620> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <DA_TLC5620>.
+Module <DA_TLC5620> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <DA_OUT_DATA<10>> in unit <DA_TLC5620> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DA_OUT_DATA<9>> in unit <DA_TLC5620> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <DA_OUT_DATA<8>> in unit <DA_TLC5620> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <DA_TLC5620>.
+    Related source file is "DA_TLC5620.v".
+    Found 1-bit register for signal <DA_IO_CLK>.
+    Found 1-bit register for signal <DA_LDAC>.
+    Found 1-bit register for signal <DA_LOAD>.
+    Found 8-bit register for signal <DA_OUT_DATA<7:0>>.
+    Found 8-bit register for signal <LED>.
+    Found 8-bit up counter for signal <analog_data>.
+    Found 1-bit register for signal <da_clk>.
+    Found 5-bit up counter for signal <ctrl_cnt>.
+    Found 6-bit comparator lessequal for signal <da_clk$cmp_le0000> created at line 83.
+    Found 4-bit up counter for signal <delay_cnt>.
+    Found 6-bit up counter for signal <div_cnt>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <DA_TLC5620> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 13
+ 1-bit register                                        : 12
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 6-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 4
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Comparators                                          : 1
+ 6-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <DA_TLC5620>, Counter <ctrl_cnt> <delay_cnt> are equivalent, XST will keep only <ctrl_cnt>.
+
+Optimizing unit <DA_TLC5620> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DA_TLC5620, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : DA_TLC5620.ngr
+Top Level Output File Name         : DA_TLC5620
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 78
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 7
+#      LUT2                        : 4
+#      LUT2_D                      : 1
+#      LUT2_L                      : 5
+#      LUT3                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 23
+#      LUT4_D                      : 1
+#      LUT4_L                      : 8
+#      MUXCY                       : 7
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 39
+#      FDC                         : 29
+#      FDCE                        : 8
+#      FDP                         : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 1
+#      OBUF                        : 31
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 4vsx35ff668-12 
+
+ Number of Slices:                       32  out of  15360     0%  
+ Number of Slice Flip Flops:             39  out of  30720     0%  
+ Number of 4 input LUTs:                 61  out of  30720     0%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    448     7%  
+ Number of GCLKs:                         2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+sys_clk                            | BUFGP                  | 7     |
+da_clk_OBUF1                       | BUFG                   | 32    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------+------------------------+-------+
+Control Signal                       | Buffer(FF name)        | Load  |
+-------------------------------------+------------------------+-------+
+sys_rst_n_inv(sys_rst_n_inv1_INV_0:O)| NONE(DA_IO_CLK)        | 39    |
+-------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -12
+
+   Minimum period: 2.138ns (Maximum Frequency: 467.803MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.810ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk'
+  Clock period: 1.542ns (frequency: 648.466MHz)
+  Total number of paths / destination ports: 22 / 7
+-------------------------------------------------------------------------
+Delay:               1.542ns (Levels of Logic = 2)
+  Source:            div_cnt_0 (FF)
+  Destination:       div_cnt_4 (FF)
+  Source Clock:      sys_clk rising
+  Destination Clock: sys_clk rising
+
+  Data Path: div_cnt_0 to div_cnt_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.272   0.571  div_cnt_0 (div_cnt_0)
+     LUT4_D:I0->O          1   0.147   0.388  Result<4>111 (Result<4>1_bdd0)
+     LUT2:I1->O            1   0.147   0.000  Result<4>12 (Result<4>1)
+     FDC:D                     0.017          div_cnt_4
+    ----------------------------------------
+    Total                      1.542ns (0.583ns logic, 0.959ns route)
+                                       (37.8% logic, 62.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'da_clk_OBUF1'
+  Clock period: 2.138ns (frequency: 467.803MHz)
+  Total number of paths / destination ports: 208 / 40
+-------------------------------------------------------------------------
+Delay:               2.138ns (Levels of Logic = 3)
+  Source:            ctrl_cnt_4 (FF)
+  Destination:       DA_OUT_DATA_4 (FF)
+  Source Clock:      da_clk_OBUF1 rising
+  Destination Clock: da_clk_OBUF1 rising
+
+  Data Path: ctrl_cnt_4 to DA_OUT_DATA_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             19   0.272   0.615  ctrl_cnt_4 (ctrl_cnt_4)
+     LUT2_D:I0->O          5   0.147   0.405  DA_OUT_DATA_6_mux0000110 (N2)
+     LUT4:I3->O            1   0.147   0.388  DA_OUT_DATA_4_mux0000_SW2 (N15)
+     LUT4:I3->O            1   0.147   0.000  DA_OUT_DATA_4_mux0000 (DA_OUT_DATA_4_mux0000)
+     FDC:D                     0.017          DA_OUT_DATA_4
+    ----------------------------------------
+    Total                      2.138ns (0.730ns logic, 1.408ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.793ns (Levels of Logic = 1)
+  Source:            da_clk (FF)
+  Destination:       da_clk (PAD)
+  Source Clock:      sys_clk rising
+
+  Data Path: da_clk to da_clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.272   0.266  da_clk (da_clk_OBUF1)
+     OBUF:I->O                 3.255          da_clk_OBUF (da_clk)
+    ----------------------------------------
+    Total                      3.793ns (3.527ns logic, 0.266ns route)
+                                       (93.0% logic, 7.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'da_clk_OBUF1'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              3.810ns (Levels of Logic = 1)
+  Source:            analog_data_5 (FF)
+  Destination:       analog_data<5> (PAD)
+  Source Clock:      da_clk_OBUF1 rising
+
+  Data Path: analog_data_5 to analog_data<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.272   0.283  analog_data_5 (analog_data_5)
+     OBUF:I->O                 3.255          analog_data_5_OBUF (analog_data<5>)
+    ----------------------------------------
+    Total                      3.810ns (3.527ns logic, 0.283ns route)
+                                       (92.6% logic, 7.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.88 secs
+ 
+--> 
+
+Total memory usage is 278180 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

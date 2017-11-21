@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dD:/workspace1/NewDocument/ISE/DA_TLC5620
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 VE5TGIf3AA[[nYMhe[H9g=1
+Z2 04 13 4 work DA_TLC5620_tb fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-9cd21efbd241-59e88f2f-34-58c4
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z6 n@_opt
+Z7 OL;O;10.2c;57
+Z8 dD:/workspace1/NewDocument/ISE/DA_TLC5620
+Z9 !s110 1508413231
+T_opt1
+Z10 VAVkh83?U3C4IO[_j;DSUf2
+R2
+R3
+Z11 =1-9cd21efbd241-59e8831d-1df-5f8
+R5
+Z12 n@_opt1
+R7
+R8
+Z13 !s110 1508410142
+T_opt2
+Z14 VRi^cGYN_jF;fI;ICGZ>6h3
+Z15 04 10 4 work DA_TLC5620 fast 0
+R3
+Z16 =1-9cd21efbd241-59e75c19-149-4964
+R5
+Z17 n@_opt2
+R7
+R8
+Z18 !s110 1508334617
+vDA_TCL5620_tb
+Z19 IXlhMB7H[PgeL`=O3Z3U8X0
+Z20 V`JN@9S9cnhjKRR_L]QIcM3
+R8
+Z21 w1508337479
+Z22 8DA_TCL5620_tb.v
+Z23 FDA_TCL5620_tb.v
+L0 25
+Z24 OL;L;10.2c;57
+r1
+31
+Z25 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z26 n@d@a_@t@c@l5620_tb
+Z27 !s110 1508337510
+Z28 !s90 -reportprogress|300|DA_TCL5620_tb.v|
+Z29 !s100 ok>Q8[?n4cCI42NW@>9So2
+Z30 !s108 1508337510.349000
+Z31 !s107 DA_TCL5620_tb.v|
+!i10b 1
+!s85 0
+!i111 0
+vDA_TLC5620
+Z32 !s100 `QcU;XkR`;HaFTYn^mO7X3
+Z33 I?J0C^c0PMGGBF^:>Ji8Be1
+R20
+R8
+Z34 w1508413864
+Z35 8DA_TLC5620.v
+Z36 FDA_TLC5620.v
+L0 21
+R24
+r1
+31
+Z37 !s90 -reportprogress|300|DA_TLC5620.v|
+R25
+Z38 n@d@a_@t@l@c5620
+Z39 !s110 1508413938
+Z40 !s108 1508413938.303000
+Z41 !s107 DA_TLC5620.v|
+!i10b 1
+!s85 0
+!i111 0
+vDA_TLC5620_tb
+R39
+Z42 !s100 7h``i[fGQlRQ3ZIGNHHYH1
+Z43 IeWnWb8c[K<:@MOh3h0^V:2
+R20
+R8
+Z44 w1508412775
+Z45 8DA_TLC5620_tb.v
+Z46 FDA_TLC5620_tb.v
+L0 25
+R24
+r1
+31
+Z47 !s90 -reportprogress|300|DA_TLC5620_tb.v|
+R25
+Z48 n@d@a_@t@l@c5620_tb
+!i10b 1
+!s85 0
+Z49 !s108 1508413938.365000
+Z50 !s107 DA_TLC5620_tb.v|
+!i111 0
+vglbl
+R39
+!i10b 1
+Z51 !s100 V<`KW`8LXe32mQ2Gdj1MB2
+Z52 IEh<73]YO2dX@ML>;=h5E@3
+R20
+R8
+Z53 w1381681120
+Z54 8C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+Z55 FC:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R24
+r1
+!s85 0
+31
+!s108 1508413938.421000
+!s107 C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+Z56 !s90 -reportprogress|300|C:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i111 0
+R25
